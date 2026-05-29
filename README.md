@@ -6,7 +6,7 @@ A premium AI-powered stock trading platform built with React, Node.js, Firebase,
 
 ## Features
 
-- **Authentication** — Firebase Auth with email/password, Google sign-in, and demo mode
+- **Authentication** — Secure Firebase Authentication with email/password and Google OAuth
 - **Real-Time Trading** — Buy/sell stocks with live price updates via WebSocket
 - **Portfolio Analytics** — Track holdings, P&L, sector allocation, and net worth
 - **Advanced Charts** — Candlestick charts, area charts, and historical data
@@ -53,7 +53,7 @@ stock exchange web/
 
 - Node.js 18+
 - npm
-- Firebase project (optional — demo mode works without it)
+- Active Firebase Project
 
 ### 1. Clone & Install
 
@@ -73,34 +73,7 @@ npm install
 
 ### 2. Configure Environment
 
-**Backend** (`backend/.env`):
-```env
-PORT=5000
-CLIENT_URL=http://localhost:5173
-JWT_SECRET=your-secret-key
-ADMIN_EMAIL=admin@nextrade.ai
-
-# Optional Firebase Admin
-FIREBASE_PROJECT_ID=your-project-id
-FIREBASE_CLIENT_EMAIL=your-service-account@project.iam.gserviceaccount.com
-FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"
-
-# Optional Stock APIs
-FINNHUB_API_KEY=your_key
-ALPHA_VANTAGE_API_KEY=your_key
-```
-
-**Frontend** (`frontend/.env`):
-```env
-VITE_API_URL=/api
-VITE_WS_URL=ws://localhost:5000
-VITE_FIREBASE_API_KEY=your-api-key
-VITE_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
-VITE_FIREBASE_PROJECT_ID=your-project-id
-VITE_FIREBASE_STORAGE_BUCKET=your-project.appspot.com
-VITE_FIREBASE_MESSAGING_SENDER_ID=123456789
-VITE_FIREBASE_APP_ID=your-app-id
-```
+Ensure that your `backend/.env` and `frontend/.env` files are configured locally with your active environment parameters (port settings, database URIs, and Firebase API keys).
 
 ### 3. Run Development Servers
 
@@ -115,12 +88,6 @@ npm run dev
 ```
 
 Open **http://localhost:5173** in your browser.
-
-### 4. Demo Mode
-
-Click **"Try Demo Account"** on the login page to explore the platform without Firebase setup. Demo users get $100,000 virtual wallet balance.
-
-For admin access, use email `admin@nextrade.ai` in demo login.
 
 ## API Endpoints
 
