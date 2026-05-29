@@ -1,0 +1,14 @@
+{
+  "name": "nextrade-ai-backend",
+  "version": "1.0.0",
+  "description": "NexTrade AI - Stock Exchange Backend API",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": ["stock", "trading", "fintech", "nextrade"],
+  "author": "",
+  "license": "ISC"
+}
